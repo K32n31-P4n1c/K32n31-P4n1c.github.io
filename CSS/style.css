@@ -1,0 +1,491 @@
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+/* FIXME: Custom properties update if needed */
+
+/* CHange the secondary font for the Titles */
+:root
+{
+    --ff--primary: 'Fira Code', monospace;
+    --ff--secondary: 'Back to 1982', 'Fira Code', monospace;
+
+    --fw-light:300;
+    --fw-regular:400;
+    --fw-medium:500;
+    --fw-bold:600;
+
+    --clr-light: #B537f2;
+    --clr-midium: #8a2be2;
+    --clr-accent: #3cb9fc;
+    --clr-dark: #120052;
+
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+/* Media queries technique for delivering a tailored style sheet to different devices. On screens that are 800px or less change params */
+@media (min-width: 800px)
+{
+    :root
+    {
+        --fs-h1:4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+
+    .services
+    {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service + .service /* ignore first apply on the others */
+    {
+        margin-left: 2em;
+    }
+}
+
+@media (min-width: 600px)
+{
+    .intro
+    {
+        display: grid;
+        width: min-content;
+        margin:0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .intro__img
+    {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;         /* Specifies the stack order of and element */
+    }
+
+    .section_subtitle__intro
+    {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+
+    .about-me
+    {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: "title img" "subtitle img" "text img";
+        grid-column-gap: 2em;
+
+    }
+
+    .section_title__about
+    {
+        grid-area: title;
+    }
+    
+    .section_subtitle__about
+    {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img
+    {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+
+}
+
+/* General styles */
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background: var(--clr-midium);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff--primary);
+    font-size: var(--fs-body);
+    line-height: 1.7;
+}
+
+section{ padding: 5em 2em;}
+img{ display: block; max-width: 100%;}
+
+strong{ font-weight: var(--fw-bold);}
+
+:focus  /* everything that has focus on it */
+{
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+.btn    /* All Butons */
+{
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover
+{
+    transform: scale(1.1);
+}
+
+/* Typography */
+
+h1,h2,h3
+{
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1);}
+h2 { font-size: var(--fs-h2);}
+h3 { font-size: var(--fs-h3);}
+
+.section_title
+{
+    margin-bottom: .25em;
+}
+
+.section_title__intro
+{
+    font-weight: var(--fw-regular);
+}
+
+/* Nested strong text to end on different line */
+.section_title__intro strong { display: block;}
+
+.section_subtitle
+{
+    margin: 0;
+    font-size: var(--fs-h3);
+    font-family: var(--ff--primary);
+
+}
+
+.section_subtitle__intro, .section_subtitle__about, .section_subtitle_work
+{
+    background: var(--clr-accent);
+    font-weight: var(--fw-medium);
+    padding: .25em 1em;
+    font-family: var(--ff--primary);
+    margin-bottom: 2em;
+}
+/* ------------------------------------------------------------------------------------------ */
+/* Header */
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.logo
+{
+    max-width: 700px;   /* TODO: EDIT THE PICTURE ON TOP */
+
+}
+
+.nav-toggle
+{
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+.nav
+{
+    position: fixed;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list
+{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__link
+{
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.nav__link:hover
+{
+    color: var(--clr-accent);
+}
+
+.nav-open .nav
+{
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle
+{
+    position: fixed;
+}
+
+.nav-open .hamburger
+{
+    transform: rotate(.625turn);
+}
+
+.nav-open .hamburger::before
+{
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after
+{
+    opacity: 0;;
+}
+
+.hamburger
+{
+
+    display: block;
+    position: relative;
+}
+
+.hamburger, .hamburger::before, .hamburger::after
+{
+    background: var(--clr-accent);
+    width: 3em;
+    height: 4px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before, .hamburger::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 8px; }
+.hamburger::after { bottom: 8px; }
+
+/* ------------------------------------------------------------------------------------------ */
+/* Introduction section */
+
+.intro
+{
+    position: relative;   
+}
+
+.intro__img
+{
+    /* box-shadow: var(--bs); */
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* My services */
+
+.my_services
+{
+    background-color: var(--clr-dark); /* FIXME: Background color in case image doesnt load */
+    background-image: url(../My_Work_BG.jpg);
+    background-size: cover;
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section_title__services
+{
+    color: var(--clr-accent);
+    position: relative;
+    font-family: var(--ff--secondary);
+}
+
+.section_title__services::after
+{
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: currentColor;
+}
+
+.services
+{
+    margin-bottom: 4em;
+}
+
+.service
+{
+    max-width: 500;
+    margin: 0 auto;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* About Me */
+
+.about-me
+{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me__img
+{
+    box-shadow: var(--bs);
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* My work */
+
+.my-work
+{
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.portfolio
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portfolio__item
+{
+    background: var(--clr-accent);
+    overflow: hidden;
+
+}
+
+.portfolio__item:focus
+{
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img
+{
+    transition: transform 750ms cubic-bezier(.5, 0, .5, 1), opacity 250ms linear;
+}
+
+.portfolio__img:hover, .portfolio__item:focus .portfolio__img
+{
+    transform: scale(1.2);
+    opacity: .75;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* Footer */
+
+.footer
+{
+    background: #111;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2,5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer__link
+{
+    font-weight: var(--fw-bold);
+}
+
+.footer__link:hover, .social-list__link:hover
+{
+    opacity: .7;
+}
+
+.footer__link:hover
+{
+    text-decoration: underline;
+}
+
+.social-list
+{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.social-list__item
+{
+    margin: 0 .5em;
+}
+
+.social-list__link
+{
+    padding: .5em;
+}

@@ -1,0 +1,112 @@
+﻿https://old.reddit.com/r/gamedev/comments/81e4yt/game_developers_share_your_portfolios/
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Example websites
+
+	https://joebrogers.com/
+	http://www.martincwong.com/
+	https://joeydevries.com/#home
+	https://andyy.co.uk/about
+	https://b4olivas.com/
+
+	http://www.michelmohr.me/
+	https://avanhalen.wordpress.com/
+	https://cdouglas.io/
+	http://reidscarboro.com/
+	http://samsuite.me/
+	https://lucarickler.github.io/portfolio/home
+	https://gamepopper.co.uk/about/
+	http://www.rebeccaansems.com/
+	http://pete.black/
+	https://frozenfractal.com/games/
+	https://subsage.github.io/
+	http://lucasmolinagames.com/
+	http://ivanvonchrist.com/
+	http://iancha.se/
+	http://fholio.de/
+	https://kcmutlu.carbonmade.com/
+	http://www.jgallant.com/
+	http://www.alexspedding.com/writing.html
+	https://matthiasfath.wordpress.com/
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CV (TODO)
+
+Hello!
+I'm Andrej Burovski, a passionate professional gameplay and tools engineer who loves to design and develop game-focused applications.
+Got an interesting project? Send me a message at Andrej.Burovski@protonmail.com
+
+
+BACKGROUND
+I'm an independent gameplay and tools engineering contractor, currently based in Skopje, North Macedonia.
+I work with a wide variety of clients, from individuals looking for someone to build their dream game to independent studios and startups that need a talented professional to help to develop their projects.
+I graduated from Birmingham City University, with First-class Honours in BSc. 
+Interactive Entertainment: Game Development, and have commercial AAA programming experience working as an Online Tools Designer at Rockstar North.
+
+As an independent contractor, I take a lot of joy in being able to continually work on a variety of different projects as it forces me to interact with new technologies, work with new people and consistently allow me to keep growing and learning. 
+There's nothing like the freedom of being able to always work on the most interesting up-and-coming opportunities that present themselves to you. My passion truly lies in game development. 
+I love being able to design and develop interactive experiences that can be enjoyed globally by a wide-range of different audiences. 
+I also love being able to create and experiment with the development of indie tools, as it gives me a chance to try and give back to the community I work in and hopefully make the lives of my fellow developers easier.
+If I'm not working hard with clients, I'm probably working on a personal project, participating in a game jam, powerlifting or exploring the gorgeous highlands of my local area.
+I'm always on the lookout for new clients with interesting projects to work on, so if you think that's you, send me an email!
+
+SKILLS
+	LANGUAGES
+	C
+	C++
+	C#
+	HTML5
+	CSS3
+	Python
+	Linux
+
+ENGINES / FRAMEWORKS
+	Unity
+	Unreal 4
+	Gamemaker Studio
+
+TOOLS
+	WinForms
+	Git & Github / GitLab / BitBucket
+	MySQL
+
+FIELDS
+	Gameplay
+	Tools
+	Scripting
+	Engine
+	User Interface
+
+STRENGTHS
+	Oral and Written Communication
+	Reliable and consistently
+	Committed to Lifelong learning
+	Team Building
+
+PROJECTS*
+
+https://globalgamejam.org/users/andrej-burovski
+
+
+💠 Game Designer » I make life fun.
+💻 Programmer » I love computers.
+🎮 Gamer » I play to win.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interviewer suggestions
+
+I won't look at your code for fear of liability and because I don't have time. 
+If you have a game, provide a precompiled Windows version and (more importantly) screenshots/video demonstrating features you're proud of. 
+I will definitely look at screenshots.
+
+For the most part, the only thing I care about your portfolio is how it shows the level of complexity you can handle.
+Listing the technically challenging/innovative features that you implemented (influence maps? massive actor counts?) makes it relevant to me. 
+Also gives interesting things to talk about in the interview (what scenario would kill perf of your influence map).
+
+For new grads, the actually shipping decent-looking games is impreзџ
+
+
+
+
++ 

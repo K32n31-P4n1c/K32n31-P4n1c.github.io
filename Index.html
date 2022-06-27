@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
+        <!-- TODO: Change the name of the document-->
+        <title>Andrej Portfolio Website</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+
+        <!-- TODO: Check font might change later -->
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="CSS/style.css">
+    </head>
+
+    <body>
+        <header>
+
+            <div class="logo">
+                <img src="Header.png" alt="">    
+            </div>
+
+            <button class="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+
+            <nav class="nav">
+                <ul class="nav__list">  <!-- Double underline for subclass -->
+                    <li class="nav__item"><a href="Index.html" class="nav__link"> Home </a></li>
+                    <li class="nav__item"><a href="Index.html#services" class="nav__link"> My Services </a></li>
+                    <li class="nav__item"><a href="Index.html#about" class="nav__link"> About Me </a></li>
+                    <li class="nav__item"><a href="Index.html#work" class="nav__link"> My Work </a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro" id="home">
+            <h1 class="section_title section_title__intro"> Hello! I am <strong> Andrej Burovski</strong></h1>
+            <p class="section_subtitle section_subtitle__intro">I'm a huge computer graphics, game programming and development enthusiast who loves to design and develop games.</p>
+            <img src="Logo_300x300.png" alt="Pixelart logo" class="intro__img">
+        </section>
+
+        <!-- My services --> <!--TODO: Insert Mine -->
+        <section class="my_services" id="services">
+            <h2 class="section_title section_title__services"> What i do</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>Design + Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div> <!-- / Service -->
+
+                <div class="service">
+                    <h3>LANGUAGES</h3>
+                    <p>C++, C#, Python, HTML/CSS</p>
+                </div> <!-- / Service -->
+
+                <div class="service">
+                    <h3>Engines/FRAMEWORKS</h3>
+                    <p>Unreal Engine 4, Unity, GameMaker, Pygame, WinForms, Git & Github, Perforce, HacknPlan</p>
+                </div>  <!-- / Services -->
+            </div> <!-- / Services -->
+
+            <a href="#work" class="btn"> My Work </a>
+        </section>
+
+        <!-- About me -->
+        <section class="about-me" id="about">
+            <h2 class="section_title section_title__about"> Who I am</h2>
+            <p class="section_subtitle section_subtitle__about">Designer & developer based out of NYC</p>
+
+            <div class="about-me__body"> 
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p></p>
+            </div>
+
+            <img src="About_me.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        </section>
+
+        <!-- My work -->
+        <section class="my-work" id="work">
+            <h2 class="section_title section_title__work">My work</h2>
+            <p class="section_subtitle section_subtitle__work"> A selection of my range of work </p>
+
+            <div class="portfolio">
+                <!-- Portfolio item 01 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-1.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 02 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-2.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 03 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-3.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 04 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-4.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 05 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-5.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 06 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-6.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 07 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-7.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 08 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-8.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 09 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-9.png" alt="" class="portfolio__img">
+                </a>
+                <!-- Portfolio item 10 -->
+                <a href="#" class="portfolio__item">
+                    <img src="Img/Rectangle 3-10.png" alt="" class="portfolio__img">
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="mailto:Andrej.Burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item"><a class="social-list__link" href="https://discord.com/brand-new"><i class="fab fa-discord"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://www.twitch.tv/"><i class="fab fa-twitch"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li class="social-list__item"><a class="social-list__link" href="https://github.com/"><i class="fab fa-github"></i></a></li>
+            </ul>
+        </footer>
+
+        <script src="js/index.js"></script>
+        
+
+    </body>
+
+</html>
+
+
+
