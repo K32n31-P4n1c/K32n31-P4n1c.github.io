@@ -62,11 +62,10 @@
     .intro
     {
         display: grid;
-        width: min-content;
+        max-width: 100%;
         margin:0 auto;
         grid-column-gap: 1em;
         grid-template-areas: "img title" "img subtitle";
-        grid-template-columns: min-content max-content;
     }
 
     .intro__img
@@ -83,6 +82,7 @@
         grid-row: 2;
         text-align: left;
         position: relative;
+        max-width: 100;
 
     }
 
@@ -184,6 +184,7 @@ h3 { font-size: var(--fs-h3);}
 .section_title
 {
     margin-bottom: .25em;
+    
 }
 
 .section_title__intro
@@ -334,12 +335,15 @@ header
 
 .intro
 {
-    position: relative;   
+    position: relative;
+    max-width: 1800px;
 }
 
 .intro__img
 {
     /* box-shadow: var(--bs); */
+    margin-right: 0;
+
 }
 
 /* ------------------------------------------------------------------------------------------ */
