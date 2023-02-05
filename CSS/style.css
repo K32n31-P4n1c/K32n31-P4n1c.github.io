@@ -138,7 +138,9 @@ body
 }
 
 section{ padding: 5em 2em;}
-img{ display: block; max-width: 100%;}
+img{
+     max-width: 100%;
+}
 
 strong{ font-weight: var(--fw-bold);}
 
@@ -416,25 +418,30 @@ header
 }
 .section_subtitle__work
 {
-    text-align: center;
     padding-bottom: 3em;
     color: var(--clr-light);
+}
+.section_subtitle.section_subtitle__work{
+    text-align: center;
 }
 
 .portfolio
 {
-    width: 1050px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .portfolio div
 {
-    display: block;
     text-align: center;
-    height:auto;
-    padding-top: 3em;
-    overflow:auto;
+    height: auto;
+    margin-top: 1em;
+    overflow: auto;
+}
+
+.portfolio .line-of-code{
+    text-align: left;
 }
 
 .portfolio h2 
@@ -445,15 +452,51 @@ header
 .portfolio h2 
 {
     padding-top: .5em;
+}
+
+.section_subtitle__work.shaders{
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 .portfolio pre
 {
-    background-color: rgba(40, 1, 49, 0.411);
+    background-size: 100%;
     font-size: small;
-    display: block;
+    display: inline-block;
     padding: 15px;
+    text-align: left;
+    font-size: 15px;
 }
+
+.cubic-lerp-text > pre {
+    padding: 0;
+    max-width: 500px;
+}
+
+.ballz, .dolly-zoom, .color-shooter, .interacting-systems, .shaders, .rpg, .snake , .turtle-race, .pathfinding , .battleship , .bob-colorland , .defector, .kompir, .shadow-rune, .cubic-lerp{
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.ballz p, .dolly-zoom p, .color-shooter p , .interacting-systems p, .rpg p, .snake p, .turtle-race p, .pathfinding p, .battleship p, .bob-colorland p, .defector p, .kompir p, .shadow-rune p, .cubic-lerp p{
+    flex: 50%;
+}
+
+.cubic-lerp-text, .ballz-text, .dolly-text, .color-text, .interacing-text, .rpg-text, .shadow-rune-text, .kompir-text, .defector-text, .colorland-text, .battleship-text, .pathfinding-text, .snake-text, .turtle-race-text, .cubic-lerp pre {
+    flex: 50%;
+    text-align: left !important;
+    padding-left: 2em;
+} 
+
+.line-of-code{
+    background-color: rgba(31, 1, 66, 0.411);
+}
+
+
 /* ------------------------------------------------------------------------------------------ */
 /* Footer */
 
@@ -462,8 +505,18 @@ header
     background: #111;
     color: var(--clr-accent);
     text-align: center;
-    padding: 2,5em 0;
+    padding: 20px;
     font-size: var(--fs-h3);
+}
+
+@media (max-width: 400px)
+{
+    .footer__link
+    {
+        font-weight: var(--fw-bold);
+        font-size: 17px;
+        margin-left: auto;
+    }
 }
 
 .footer a
@@ -492,8 +545,11 @@ header
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0 0;
+    margin: 0.6em 0 0;
     padding: 0;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .social-list__item
@@ -504,4 +560,34 @@ header
 .social-list__link
 {
     padding: .7em;
+}
+
+@media (max-width: 1020px)
+{
+    .ballz, .dolly-zoom, .color-shooter, .interacting-systems, .shaders, .rpg, .snake , .turtle-race, .pathfinding , .battleship , .bob-colorland , .defector, .kompir, .shadow-rune, .cubic-lerp{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0;        
+    }
+    
+    .ballz p, .dolly-zoom p, .color-shooter p , .interacting-systems p, .rpg p, .snake p, .turtle-race p, .pathfinding p, .battleship p, .bob-colorland p, .defector p, .kompir p, .shadow-rune p, .cubic-lerp p{
+        flex: 100%;
+    }
+    
+    .ballz-text, .dolly-text, .color-text, .interacing-text, .rpg-text, .shadow-rune-text, .kompir-text, .defector-text, .colorland-text, .battleship-text, .pathfinding-text, .snake-text, .turtle-race-text, .cubic-lerp pre {
+        flex: 100%;
+        text-align: left !important;
+    } 
+    .cubic-lerp-text > pre {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 400px){
+    .cubic-lerp-text > pre {
+        max-width: 200px;
+    }
 }

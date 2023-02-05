@@ -1,103 +1,128 @@
 <!DOCTYPE html>
 <html land="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width", initial-scale=1.0">
-        <title>Andrej Portfolio Website</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <!-- TODO: Check font might change later -->
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="CSS/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <title>Andrej Portfolio Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <body>
-        <header>
+    <!-- TODO: Check font might change later -->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
 
-            <div class="logo">
-                <img src="Header.png" alt="">    
-            </div>
+<body>
+    <header>
 
-            <button class="nav-toggle">
-                <span class="hamburger"></span>
-            </button>
+        <div class="logo">
+            <img src="Header.png" alt="">
+        </div>
 
-            <nav class="nav">
-                <ul class="nav__list">  <!-- Double underline for subclass -->
-                    <li class="nav__item"><a href="Index.html" class="nav__link"> Home </a></li>
-                    <li class="nav__item"><a href="Index.html#services" class="nav__link"> My Services </a></li>
-                    <li class="nav__item"><a href="Index.html#about" class="nav__link"> About Me </a></li>
-                    <li class="nav__item"><a href="Index.html#work" class="nav__link"> My Work </a></li>
-                </ul>
-            </nav>
-        </header>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
 
-        <!-- Introduction -->
-        <section class="intro" id="home">
-            <h1 class="section_title section_title__intro"> Hello! I am <strong> Andrej Burovski</strong></h1>
-            <p class="section_subtitle section_subtitle__intro">I'm a huge game programming and development enthusiast who loves to design and develop games.</p>
-            <img src="Logo_300x300.png" alt="Pixelart logo" class="intro__img">
-        </section>
+        <nav class="nav">
+            <ul class="nav__list"> <!-- Double underline for subclass -->
+                <li class="nav__item"><a href="Index.html" class="nav__link"> Home </a></li>
+                <li class="nav__item"><a href="Index.html#services" class="nav__link"> My Services </a></li>
+                <li class="nav__item"><a href="Index.html#about" class="nav__link"> About Me </a></li>
+                <li class="nav__item"><a href="Index.html#work" class="nav__link"> My Work </a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <section class="my_services" id="services">
-            <h2 class="section_title section_title__services"> What i do</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>Design + Development</h3>
-                    <p>A passionate gameplay and tools programmer who loves to design and develop game-focused applications.</p>
-                </div> <!-- / Service -->
+    <!-- Introduction -->
+    <section class="intro" id="home">
+        <h1 class="section_title section_title__intro"> Hello! I am <strong> Andrej Burovski</strong></h1>
+        <p class="section_subtitle section_subtitle__intro">I'm a huge game programming and development enthusiast who
+            loves to design and develop games.</p>
+        <img src="Logo_300x300.png" alt="Pixelart logo" class="intro__img">
+    </section>
 
-                <div class="service">
-                    <h3>LANGUAGES</h3>
-                    <p>C++, C#, Python, MySql HTML/CSS</p>
-                </div> <!-- / Service -->
+    <section class="my_services" id="services">
+        <h2 class="section_title section_title__services"> What i do</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Design + Development</h3>
+                <p>A passionate gameplay and tools programmer who loves to design and develop game-focused applications.
+                </p>
+            </div> <!-- / Service -->
 
-                <div class="service">
-                    <h3>Engines/FRAMEWORKS</h3>
-                    <p>Unreal Engine 4, Unity, GameMaker, Pygame, WinForms, Git & Github, Perforce, HacknPlan</p>
-                </div>  <!-- / Services -->
+            <div class="service">
+                <h3>LANGUAGES</h3>
+                <p>C++, C#, Python, MySql HTML/CSS</p>
+            </div> <!-- / Service -->
+
+            <div class="service">
+                <h3>Engines/FRAMEWORKS</h3>
+                <p>Unreal Engine 4, Unity, GameMaker, Pygame, WinForms, Git & Github, Perforce, HacknPlan</p>
             </div> <!-- / Services -->
+        </div> <!-- / Services -->
 
-            <a href="#work" class="btn"> My Work </a>
-        </section>
+        <a href="#work" class="btn"> My Work </a>
+        <a href="./Resume - Andrej Burovski.pdf" class="btn" style="margin-left:10px"> Resume </a>
+    </section>
 
-        <!-- About me -->
-        <section class="about-me" id="about">
-            <h2 class="section_title section_title__about"> Who I am</h2>
-            <p class="section_subtitle section_subtitle__about">Designer & developer</p>
-            <div class="about-me__body"> 
-                <p><strong> 
+    <!-- About me -->
+    <section class="about-me" id="about">
+        <h2 class="section_title section_title__about"> Who I am</h2>
+        <p class="section_subtitle section_subtitle__about">Designer & developer</p>
+        <div class="about-me__body">
+            <p><strong>
                     My passion truly lies in game development.
-                    I am an independent game developer who enjoys learning, taking on challenges and designing video game systems.
-                    I take a lot of joy in being able to continually work on a variety of different projects as it consistently allows me to keep growing and learning.
-                    I love being able to design and develop interactive experiences that can be enjoyed globally by a wide-range of different audiences.
-                    If I'm not working hard with clients, I'm probably working on a personal project, participating in a game jam, powerlifting or exploring the gorgeous highlands of my local area.
-                    I'm always on the lookout for new clients with interesting projects to work on, so if you think that's you, send me an email!
+                    I am an independent game developer who enjoys learning, taking on challenges and designing video
+                    game systems.
+                    I take a lot of joy in being able to continually work on a variety of different projects as it
+                    consistently allows me to keep growing and learning.
+                    I love being able to design and develop interactive experiences that can be enjoyed globally by a
+                    wide-range of different audiences.
+                    If I'm not working hard with clients, I'm probably working on a personal project, participating in a
+                    game jam, powerlifting or exploring the gorgeous highlands of my local area.
+                    I'm always on the lookout for new clients with interesting projects to work on, so if you think
+                    that's you, send me an email!
                 </strong></p>
-                <p></p>
+            <p></p>
+        </div>
+
+        <img src="About_me.jpg" alt="Jane leaning against a bus" class="about-me__img">
+    </section>
+
+    <!-- My work -->
+    <section class="my-work" id="work">
+        <h2 class="section_title section_title__work">My work</h2>
+        <p class="section_subtitle section_subtitle__work"> A selection of my range of work </p>
+        <div class="portfolio">
+            <h2 class="section_title__work">Unreal engine</h2>
+            <div class="dolly-zoom">
+                <p><img src="Img/Dolly_zoom.gif" loading="lazy"></p>
+                <div class="dolly-text">
+                    <a class="section_subtitle__work">
+                        <h3>Dolly zoom / Vertigo effect</h3>
+                    </a>
+                    <p>A dolly zoom is an in-camera effect that appears to undermine normal visual perception. The
+                        effect is achieved by zooming a zoom lens to adjust the angle of view while the camera dollies
+                        toward or away from the subject in such a way as to keep the subject the same size in the frame
+                        throughout.</p>
+                </div>
             </div>
-
-            <img src="About_me.jpg" alt="Jane leaning against a bus" class="about-me__img">
-        </section>
-
-        <!-- My work -->
-        <section class="my-work" id="work">
-            <h2 class="section_title section_title__work">My work</h2>
-            <p class="section_subtitle section_subtitle__work"> A selection of my range of work </p>
-            <div class="portfolio">
-                <h2 class="section_title__work">Unreal engine</h2>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Dolly_zoom.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>Dolly zoom / Vertigo effect</h3></a>
-                    <p>A dolly zoom is an in-camera effect that appears to undermine normal visual perception. The effect is achieved by zooming a zoom lens to adjust the angle of view while the camera dollies toward or away from the subject in such a way as to keep the subject the same size in the frame throughout.</p>
+            <div class="color-shooter">
+                <p><img src="Img/ColorShooter.gif" loading="lazy"></p>
+                <div class="color-text">
+                    <a class="section_subtitle__work">
+                        <h3>ColorShooter</h3>
+                    </a>
+                    <p>This is a small First-person C++ project. The goal of this game is that every time we shoot an
+                        object it shrinks and disappears under a certain threshold hits, when we hit the cubes we get
+                        feedback by changing its color. You can check the main functionality written in C++ below</p>
                 </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/ColorShooter.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>ColorShooter</h3></a>
-                    <p>This is a small First-person C++ project. The goal of this game is that every time we shoot an object it shrinks and disappears under a certain threshold hits, when we hit the cubes we get feedback by changing its color. You can check the main functionality written in C++ below</p>
-                </div>
-                    <pre>
+            </div>
+            <div class="line-of-code">
+                <pre>
 void AFPSProjectile::OnHit(
     UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit){
     // Only add impulse and destroy projectile if we hit a physics
@@ -118,23 +143,32 @@ void AFPSProjectile::OnHit(
         if(_MatInst){
             // Change the RGB color, stored in a vector
             _MatInst->SetVectorParameterValue("Color", FLinearColor::MakeRandomColor());}}} 
-</pre>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Interact.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/Interaction_system"><h3>Interacting systems</h3></a>
-                    <p>Interacting system components that can be attached to any actor, apply physics forces to components that are detected through tracing. </p>
+                    </pre>
+            </div>
+            <div class="interacting-systems">
+                <p><img src="Img/Interact.gif" loading="lazy"></p>
+                <div class="interacing-text">
+                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/Interaction_system">
+                        <h3>Interacting systems</h3>
+                    </a>
+                    <p>Interacting system components that can be attached to any actor, apply physics forces to
+                        components that are detected through tracing. </p>
                 </div>
+            </div>
 
-                <h2 class="section_title__work">Unity</h2>
-                <div style="align-items: center;">
-                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/UShaders"><h3>Shaders</h3></a>
-                    <p style="float: left; padding-left: 1.5em;"><img src="Img/Shade1.gif" loading="lazy"></p>
-                    <p style="float: left;"><img src="Img/Shade2.gif" loading="lazy"></p>
-                </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/CubicLerp.gif" loading="lazy"></p>
-<pre>
-                    <a class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></a>
+            <h2 class="section_title__work">Unity</h2>
+            <a class="section_subtitle__work shaders" href="https://github.com/K32n31-P4n1c/UShaders">
+                <h3>Shaders</h3>
+            </a>
+            <div class="shaders">
+                <p><img src="Img/Shade1.gif" loading="lazy"></p>
+                <p><img src="Img/Shade2.gif" loading="lazy"></p>
+            </div>
+            <div class="cubic-lerp">
+                <p><img src="Img/CubicLerp.gif" loading="lazy"></p>
+                <div class="cubic-lerp-text">
+                        <a class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></a>
+                        <pre>    
 private Vector3 QuadraticLerp(Vector3 a, Vector3 b, Vector3 c, float t){
 Vector3 ab = Vector3.Lerp(a, b, t);
 Vector3 bc = Vector3.Lerp(b, c, t);
@@ -144,108 +178,151 @@ private Vector3 CubicLerp(Vector3 a, Vector3 b, Vector3 c, Vector3 d, float t){
 Vector3 ab_bc = QuadraticLerp(a, b, c, t);
 Vector3 bc_cd = QuadraticLerp(b, c, d, t);
 return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
-
-
-
-</pre>
+        </pre>
+        </div>
+            </div>
+            <div class="rpg">
+                <p><img src="Img/2DRPG.gif" loading="lazy"></p>
+                <div class="rpg-text">
+                    <a class="section_subtitle__work">
+                        <h3>2D RPG adventure</h3>
+                    </a>
+                    <p> Currently building a 2D RPG-style game, still havent defined most of the functionalities of this
+                        game. </p>
                 </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/2DRPG.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>2D RPG adventure</h3></a>
-                    <p> Currently building a 2D RPG-style game, still havent defined most of the functionalities of this game.  </p>
+            </div>
+            <div class="ballz">
+                <p><img src="Img/Ballz.gif" loading="lazy"></p>
+                <div class="ballz-text">
+                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/UBallz">
+                        <h3>Ballz</h3>
+                    </a>
+                    <p> A simple Ballz game where every wave you get to lunch one more ball. Every wave is more difficult,
+                        try to survive as much time as you can. </p>
                 </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Ballz.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/UBallz"><h3>Ballz</h3></a>
-                    <p> A simple Ballz game where every wave you get to lunch one more ball. Every wave is more difficult, try to survive as much time as you can. </p>
-                </div>
-                <h2 class="section_title__work">Pygame</h2>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Snake.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>Snake</h3></a>
+            </div>
+            <h2 class="section_title__work">Pygame</h2>
+            <div class="snake">
+                <p><img src="Img/Snake.gif" loading="lazy"></p>
+                <div class="snake-text">
+                    <a class="section_subtitle__work">
+                        <h3>Snake</h3>
+                    </a>
                     <p> Basic version off snake made in python and pygame.</p>
                 </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/TurtleRace.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>Turtle race</h3></a>
-                    <p>This is a small project where The user picks how many turtles they want to race, and the program will race that many turtles by randomly moving them across the screen.</p>
+            </div>
+            <div class="turtle-race">
+                <p><img src="Img/TurtleRace.gif" loading="lazy"></p>
+                <div class="turtle-race-text">
+                    <a class="section_subtitle__work">
+                        <h3>Turtle race</h3>
+                    </a>
+                    <p>This is a small project where The user picks how many turtles they want to race, and the program will
+                        race that many turtles by randomly moving them across the screen.</p>
                 </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/PathFindingAlgo.png" loading="lazy"></p>
-                    <a class="section_subtitle__work"><h3>Pathfinding Visualization</h3></a>
-                    <p> Simple  path finding visualizer tool to visualize the a star pathfinding algorithm as it runs. This astar pathfinding algorithm is an informed search algorithm which means it is much more efficient that your standard algorithms like breadth first search or depth first search.
+            </div>
+            <div class="pathfinding">
+                <p><img src="Img/PathFindingAlgo.png" loading="lazy"></p>
+                <div class="pathfinding-text"><a class="section_subtitle__work">
+                        <h3>Pathfinding Visualization</h3>
+                    </a>
+                    <p> Simple path finding visualizer tool to visualize the a star pathfinding algorithm as it runs. This
+                        astar pathfinding algorithm is an informed search algorithm which means it is much more efficient
+                        that your standard algorithms like breadth first search or depth first search.
                         You have to specify the start and end point, then draw all the obstacles on the map.
                     </p>
                 </div>
-                
-                <h2 class="section_title__work">WinForms</h2>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/BattleShip.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips"><h3>Battleships</h3></a>
-                    <p>Battleship is a war-themed board game for two players in which the opponents try to guess the location of the other's various ships.The goal of the game is to sink all of the opponent's ships by correctly guessing their location on the grid.</p>
-                </div>
+            </div>
 
-                <h2 class="section_title__work">Gamejam Games</h2>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/BobInColorland.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://run71m3-3rr0r.itch.io/bob-in-colorland"><h3>Bob in Colorland</h3></a>
-                    <p> I was solo developing this game for the purpose of the gamejam+ competition. The game is about a painter who is collecting colors to paint his way to glory.
-                        Each collected color gives you a special ability, for example, blue once gives you access to spawning platforms.</p>
-                </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Defector.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://globalgamejam.org/2022/games/defector-7"><h3>Defector</h3></a>
-                    <p>Defector 2D Platformer was made in Unreal Engine with a team of three people. Me as programmer, game designer, and artist.
-                        My Programming Responsibilities were to implement the UI and its functionalities, design all the moving scaling and rotating platforms, and implement the system for health.</p>
-                </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/TheLastKompir.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://globalgamejam.org/2017/games/last-kompir"><h3>The Last Kompir</h3></a>
-                    <p>The Last Kompir is a hack and slash survivor game mede in Unreal Engine. You are fighting with waves of vegetable zombies to survive the adventure.
-                        I scripted the platforms for dashing and launching the player into the air and also the logic for the waves of enemies.</p>
-                </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/Shadow's Rune.gif" loading="lazy"></p>
-                    <a class="section_subtitle__work" href="https://globalgamejam.org/2016/games/shadows-rune"><h3>Shadow's Rune</h3></a>
-                    <p> I'm really proud of this project since the whole level was designed and programmed by me in Unreal Engine.
-                        My responsibility was to design the whole level to be scary and implement mechanics for picking all the letters in the level.
-                        This game is based on Horror-Puzzle experience about a single father with daughter whom had unexplained twist of events as the daughter dies of unnatural reasons. 
-                        The father falls in huge depression to find his way out of the protagonist hypnotic possession, as he is being awaken in an alter reality of a dreams including himself being tortured on their happy moments they used to had before.</p>
-                </div>
-                <div>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/VoshGesOzhaiAcha_1.png"></p>
-                    <p style="float: right; height: auto; padding-left: 5em;"><img src="Img/VoshGesOzhaiAcha_2.png"></p>
-                    <a class="section_subtitle__work" href="https://globalgamejam.org/2015/games/vosh-ges-ozhai-acha"><h3>Vosh ges ozhai acha?</h3></a>
-                    <p> Vosh ges ozhai acha was my first try to make a game in GameMaker.
-                        With a focus on originality, we created this stunning 2D adventure showing off in-depth pixel graphics.
-                        The setting is a baren fantasy world, untouched and covered with deep seas and lush forests. 
-                        Our main objective was conveying the story through as little interaction as possible through crippling GUIs and text. 
-                        The story features two young people who find themselves stranded in an unfamiliar environment, greeted by what seems to be an alien with shady intentions and a habbit of being very moody. 
-                        The player is overwhelmed with questions and almost no answers, constantly asking himself "What will happen next?"</p>
+            <h2 class="section_title__work">WinForms</h2>
+            <div class="battleship">
+                <p><img src="Img/BattleShip.gif" loading="lazy"></p>
+                <div class="battleship-text"><a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips">
+                    <h3>Battleships</h3>
+                </a>
+                <p>Battleship is a war-themed board game for two players in which the opponents try to guess the
+                    location of the other's various ships.The goal of the game is to sink all of the opponent's ships by
+                    correctly guessing their location on the grid.</p>
                 </div>
             </div>
-        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:Andrej.Burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a>
-            <a href="./Resume - Andrej Burovski.pdf" class="footer__link" style="margin-left: 3em;"> Resume  <i class="fa-solid fa-file-pdf"></i></a>
-            <ul class="social-list">
-                <li class="social-list__item"><a class="social-list__link" href="https://github.com/K32n31-P4n1c"><i class="fa-brands fa-github"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://discord.com/users/138310775390339072"><i class="fab fa-discord"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://run71m3-3rr0r.itch.io/"><i class="fa-brands fa-itch-io"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://globalgamejam.org/users/andrej-burovski"><i class="fa-solid fa-earth-americas"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://www.instagram.com/andrej_3rr0r/"><i class="fa-brands fa-instagram"></i></a></li>
-                <li class="social-list__item"><a class="social-list__link" href="https://www.twitch.tv/run71m3_3rr0r"><i class="fab fa-twitch"></i></a></li>
+            <h2 class="section_title__work">Gamejam Games</h2>
+            <div class="bob-colorland">
+                <p><img src="Img/BobInColorland.gif" loading="lazy"></p>
+                <div class="colorland-text"><a class="section_subtitle__work" href="https://run71m3-3rr0r.itch.io/bob-in-colorland">
+                        <h3>Bob in Colorland</h3>
+                    </a>
+                    <p> I was solo developing this game for the purpose of the gamejam+ competition. The game is about a
+                        painter who is collecting colors to paint his way to glory.
+                        Each collected color gives you a special ability, for example, blue once gives you access to
+                        spawning platforms.</p>
+                </div>
+            </div>
+            <div class="defector">
+                <p><img src="Img/Defector.gif" loading="lazy"></p>
+                <div class="defector-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2022/games/defector-7">
+                    <h3>Defector</h3>
+                </a>
+                <p>Defector 2D Platformer was made in Unreal Engine with a team of three people. Me as programmer, game
+                    designer, and artist.
+                    My Programming Responsibilities were to implement the UI and its functionalities, design all the
+                    moving scaling and rotating platforms, and implement the system for health.</p></div>
+            </div>
+            <div class="kompir">
+                <p><img src="Img/TheLastKompir.gif" loading="lazy"></p>
+                    <div class="kompir-text">
+                        <a class="section_subtitle__work" href="https://globalgamejam.org/2017/games/last-kompir">
+                            <h3>The Last Kompir</h3>
+                        </a>
+                        <p>The Last Kompir is a hack and slash survivor game mede in Unreal Engine. You are fighting with waves
+                            of vegetable zombies to survive the adventure.
+                            I scripted the platforms for dashing and launching the player into the air and also the logic for
+                            the waves of enemies.</p>
+                    </div>
+            </div>
+            <div class="shadow-rune">
+                <p><img src="Img/Shadow's Rune.gif" loading="lazy"></p>
+                    <div class="shadow-rune-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2016/games/shadows-rune">
+                            <h3>Shadow's Rune</h3>
+                        </a>
+                        <p> I'm really proud of this project since the whole level was designed and programmed by me in Unreal
+                            Engine.
+                            My responsibility was to design the whole level to be scary and implement mechanics for picking all
+                            the letters in the level.
+                            This game is based on Horror-Puzzle experience about a single father with daughter whom had
+                            unexplained twist of events as the daughter dies of unnatural reasons.
+                            The father falls in huge depression to find his way out of the protagonist hypnotic possession, as
+                            he is being awaken in an alter reality of a dreams including himself being tortured on their happy
+                            moments they used to had before.</p>
+                    </div>
+            </div>
+        </div>
+    </section>
 
-            </ul>
-        </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="mailto:andrej.burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a><br>
+        <a href="./Resume - Andrej Burovski.pdf" class="footer__link"> Resume <i class="fa-solid fa-file-pdf"></i></a>
+        <ul class="social-list">
+            <li class="social-list__item"><a class="social-list__link" href="https://github.com/K32n31-P4n1c"><i
+                        class="fa-brands fa-github"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link"
+                    href="https://discord.com/users/138310775390339072"><i class="fab fa-discord"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://run71m3-3rr0r.itch.io/"><i
+                        class="fa-brands fa-itch-io"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link"
+                    href="https://globalgamejam.org/users/andrej-burovski"><i
+                        class="fa-solid fa-earth-americas"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://www.instagram.com/andrej_3rr0r/"><i
+                        class="fa-brands fa-instagram"></i></a></li>
+            <li class="social-list__item"><a class="social-list__link" href="https://www.twitch.tv/run71m3_3rr0r"><i
+                        class="fab fa-twitch"></i></a></li>
 
-        <script src="js/index.js"></script>
+        </ul>
+    </footer>
 
-    </body>
+    <script src="js/index.js"></script>
+
+</body>
 
 </html>
-
-
-
