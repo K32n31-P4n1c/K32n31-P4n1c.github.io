@@ -1,42 +1,40 @@
 <!DOCTYPE html>
-<html land="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Andrej Burovski portfolio site featuring gameplay programming, Unreal Engine, Unity, and shader work.">
     <title>Andrej Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- TODO: Check font might change later -->
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
     <header>
-
         <div class="logo">
-            <img src="Header.png" alt="">
+            <img src="Header.png" alt="Andrej Burovski portfolio header">
         </div>
 
-        <button class="nav-toggle">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-navigation">
             <span class="hamburger"></span>
         </button>
 
-        <nav class="nav">
-            <ul class="nav__list"> <!-- Double underline for subclass -->
-                <li class="nav__item"><a href="Index.html" class="nav__link"> Home </a></li>
-                <li class="nav__item"><a href="Index.html#services" class="nav__link"> My Services </a></li>
-                <li class="nav__item"><a href="Index.html#about" class="nav__link"> About Me </a></li>
-                <li class="nav__item"><a href="Index.html#work" class="nav__link"> My Work </a></li>
+        <nav class="nav" id="site-navigation" aria-label="Main navigation">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#home" class="nav__link"> Home </a></li>
+                <li class="nav__item"><a href="#services" class="nav__link"> My Services </a></li>
+                <li class="nav__item"><a href="#about" class="nav__link"> About Me </a></li>
+                <li class="nav__item"><a href="#work" class="nav__link"> My Work </a></li>
+                <li class="nav__item"><a href="#ue5-shaders" class="nav__link"> UE5 Shaders </a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Introduction -->
     <section class="intro" id="home">
         <h1 class="section_title section_title__intro"> Hello! I am <strong> Andrej Burovski</strong></h1>
         <p class="section_subtitle section_subtitle__intro">I'm a huge game programming and development enthusiast who
@@ -51,24 +49,23 @@
                 <h3>Design + Development</h3>
                 <p>A passionate gameplay and tools programmer who loves to design and develop game-focused applications.
                 </p>
-            </div> <!-- / Service -->
+            </div>
 
             <div class="service">
                 <h3>LANGUAGES</h3>
                 <p>C++, C#, Python, MySql HTML/CSS</p>
-            </div> <!-- / Service -->
+            </div>
 
             <div class="service">
                 <h3>Engines/FRAMEWORKS</h3>
                 <p>Unreal Engine 4, Unity, GameMaker, Pygame, WinForms, Git & Github, Perforce, HacknPlan</p>
-            </div> <!-- / Services -->
-        </div> <!-- / Services -->
+            </div>
+        </div>
 
         <a href="#work" class="btn"> My Work </a>
         <a href="./Resume - Andrej Burovski.pdf" class="btn" style="margin-left:10px"> Resume </a>
     </section>
 
-    <!-- About me -->
     <section class="about-me" id="about">
         <h2 class="section_title section_title__about"> Who I am</h2>
         <p class="section_subtitle section_subtitle__about">Designer & developer</p>
@@ -86,20 +83,18 @@
                     I'm always on the lookout for new clients with interesting projects to work on, so if you think
                     that's you, send me an email!
                 </strong></p>
-            <p></p>
         </div>
 
-        <img src="About_me.jpg" alt="Jane leaning against a bus" class="about-me__img">
+        <img src="About_me.jpg" alt="Portrait of Andrej Burovski" class="about-me__img">
     </section>
 
-    <!-- My work -->
     <section class="my-work" id="work">
         <h2 class="section_title section_title__work">My work</h2>
         <p class="section_subtitle section_subtitle__work"> A selection of my range of work </p>
         <div class="portfolio">
             <h2 class="section_title__work">Unreal engine</h2>
             <div class="dolly-zoom">
-                <p><img src="Img/Dolly_zoom.gif" loading="lazy"></p>
+                <p><img src="Img/Dolly_zoom.gif" alt="Dolly zoom effect" loading="lazy"></p>
                 <div class="dolly-text">
                     <a class="section_subtitle__work">
                         <h3>Dolly zoom / Vertigo effect</h3>
@@ -111,7 +106,7 @@
                 </div>
             </div>
             <div class="color-shooter">
-                <p><img src="Img/ColorShooter.gif" loading="lazy"></p>
+                <p><img src="Img/ColorShooter.gif" alt="ColorShooter demo" loading="lazy"></p>
                 <div class="color-text">
                     <a class="section_subtitle__work">
                         <h3>ColorShooter</h3>
@@ -146,7 +141,7 @@ void AFPSProjectile::OnHit(
                     </pre>
             </div>
             <div class="interacting-systems">
-                <p><img src="Img/Interact.gif" loading="lazy"></p>
+                <p><img src="Img/Interact.gif" alt="Interaction system demo" loading="lazy"></p>
                 <div class="interacing-text">
                     <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/Interaction_system">
                         <h3>Interacting systems</h3>
@@ -156,16 +151,39 @@ void AFPSProjectile::OnHit(
                 </div>
             </div>
 
+            <h2 class="section_title__work" id="ue5-shaders">UE5 shaders</h2>
+            <p class="section_subtitle section_subtitle__work section_subtitle__work--compact">Shader studies and rendered material tests in Unreal Engine&nbsp;5.</p>
+            <div class="video-grid">
+                <article class="video-card">
+                    <div class="video-card__media">
+                        <video controls preload="metadata" playsinline>
+                            <source src="Videos/Shader_HLSL_01.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-card__content">
+                        <h3>Shader HLSL 01</h3>
+                    </div>
+                </article>
+
+                <article class="video-card">
+                    <div class="video-card__content">
+                        <h3>Shader explanation</h3>
+                        <p>Write a short breakdown here describing the shader goal, material setup, HLSL logic, parameters, and what makes this effect interesting.</p>
+                    </div>
+                </article>
+            </div>
+
             <h2 class="section_title__work">Unity</h2>
             <a class="section_subtitle__work shaders" href="https://github.com/K32n31-P4n1c/UShaders">
                 <h3>Shaders</h3>
             </a>
             <div class="shaders">
-                <p><img src="Img/Shade1.gif" loading="lazy"></p>
-                <p><img src="Img/Shade2.gif" loading="lazy"></p>
+                <p><img src="Img/Shade1.gif" alt="Unity shader gif 1" loading="lazy"></p>
+                <p><img src="Img/Shade2.gif" alt="Unity shader gif 2" loading="lazy"></p>
             </div>
             <div class="cubic-lerp">
-                <p><img src="Img/CubicLerp.gif" loading="lazy"></p>
+                <p><img src="Img/CubicLerp.gif" alt="Cubic lerp demo" loading="lazy"></p>
                 <div class="cubic-lerp-text">
                         <a class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></a>
                         <pre>    
@@ -182,7 +200,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
         </div>
             </div>
             <div class="rpg">
-                <p><img src="Img/2DRPG.gif" loading="lazy"></p>
+                <p><img src="Img/2DRPG.gif" alt="2D RPG demo" loading="lazy"></p>
                 <div class="rpg-text">
                     <a class="section_subtitle__work">
                         <h3>2D RPG adventure</h3>
@@ -192,7 +210,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 </div>
             </div>
             <div class="ballz">
-                <p><img src="Img/Ballz.gif" loading="lazy"></p>
+                <p><img src="Img/Ballz.gif" alt="Ballz demo" loading="lazy"></p>
                 <div class="ballz-text">
                     <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/UBallz">
                         <h3>Ballz</h3>
@@ -203,7 +221,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
             </div>
             <h2 class="section_title__work">Pygame</h2>
             <div class="snake">
-                <p><img src="Img/Snake.gif" loading="lazy"></p>
+                <p><img src="Img/Snake.gif" alt="Snake demo" loading="lazy"></p>
                 <div class="snake-text">
                     <a class="section_subtitle__work">
                         <h3>Snake</h3>
@@ -212,7 +230,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 </div>
             </div>
             <div class="turtle-race">
-                <p><img src="Img/TurtleRace.gif" loading="lazy"></p>
+                <p><img src="Img/TurtleRace.gif" alt="Turtle race demo" loading="lazy"></p>
                 <div class="turtle-race-text">
                     <a class="section_subtitle__work">
                         <h3>Turtle race</h3>
@@ -222,7 +240,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 </div>
             </div>
             <div class="pathfinding">
-                <p><img src="Img/PathFindingAlgo.png" loading="lazy"></p>
+                <p><img src="Img/PathFindingAlgo.png" alt="Pathfinding visualizer" loading="lazy"></p>
                 <div class="pathfinding-text"><a class="section_subtitle__work">
                         <h3>Pathfinding Visualization</h3>
                     </a>
@@ -236,7 +254,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
 
             <h2 class="section_title__work">WinForms</h2>
             <div class="battleship">
-                <p><img src="Img/BattleShip.gif" loading="lazy"></p>
+                <p><img src="Img/BattleShip.gif" alt="Battleships demo" loading="lazy"></p>
                 <div class="battleship-text"><a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips">
                     <h3>Battleships</h3>
                 </a>
@@ -248,7 +266,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
 
             <h2 class="section_title__work">Gamejam Games</h2>
             <div class="bob-colorland">
-                <p><img src="Img/BobInColorland.gif" loading="lazy"></p>
+                <p><img src="Img/BobInColorland.gif" alt="Bob in Colorland demo" loading="lazy"></p>
                 <div class="colorland-text"><a class="section_subtitle__work" href="https://run71m3-3rr0r.itch.io/bob-in-colorland">
                         <h3>Bob in Colorland</h3>
                     </a>
@@ -259,7 +277,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 </div>
             </div>
             <div class="defector">
-                <p><img src="Img/Defector.gif" loading="lazy"></p>
+                <p><img src="Img/Defector.gif" alt="Defector demo" loading="lazy"></p>
                 <div class="defector-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2022/games/defector-7">
                     <h3>Defector</h3>
                 </a>
@@ -269,7 +287,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     moving scaling and rotating platforms, and implement the system for health.</p></div>
             </div>
             <div class="kompir">
-                <p><img src="Img/TheLastKompir.gif" loading="lazy"></p>
+                <p><img src="Img/TheLastKompir.gif" alt="The Last Kompir demo" loading="lazy"></p>
                     <div class="kompir-text">
                         <a class="section_subtitle__work" href="https://globalgamejam.org/2017/games/last-kompir">
                             <h3>The Last Kompir</h3>
@@ -281,7 +299,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     </div>
             </div>
             <div class="shadow-rune">
-                <p><img src="Img/Shadow's Rune.gif" loading="lazy"></p>
+                <p><img src="Img/Shadow's Rune.gif" alt="Shadow's Rune demo" loading="lazy"></p>
                     <div class="shadow-rune-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2016/games/shadows-rune">
                             <h3>Shadow's Rune</h3>
                         </a>
@@ -299,7 +317,6 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <a href="mailto:andrej.burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a><br>
         <a href="./Resume - Andrej Burovski.pdf" class="footer__link"> Resume <i class="fa-solid fa-file-pdf"></i></a>
@@ -323,7 +340,6 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
     </footer>
 
     <script src="js/index.js"></script>
-
 </body>
 
 </html>
