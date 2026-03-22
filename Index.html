@@ -169,7 +169,9 @@ void AFPSProjectile::OnHit(
                 <article class="video-card">
                     <div class="video-card__content">
                         <h3>Shader explanation</h3>
-                        <p>Write a short breakdown here describing the shader goal, material setup, HLSL logic, parameters, and what makes this effect interesting.</p>
+                        <p>This shader builds a procedural sci-fi light pattern designed to make a surface feel active, digital, and slightly unpredictable, like a futuristic panel, reactor surface, or diagnostic display, without relying on texture inputs.</p>
+                        <p>It uses HLSL-driven randomness over a simple grid so each cell gets its own timing, motion, and intensity. That variation keeps the animation from feeling mechanical while still preserving a clean, engineered structure.</p>
+                        <p>A small set of exposed parameters controls density, speed, brightness, sharpness, and how many cells remain inactive, making the effect easy to art-direct. The final result sits between interface design and ambient motion: ordered, readable, and still alive.</p>
                     </div>
                 </article>
             </div>
@@ -343,3 +345,4 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
 </body>
 
 </html>
+
