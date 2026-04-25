@@ -85,3 +85,97 @@ if ('IntersectionObserver' in window && workSections.length > 0 && workNavLinks.
 
     setActiveWorkLink(workSections[0].id);
 }
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    document.body.classList.add('gsap-ready');
+
+    gsap.from('.logo, .nav-toggle', {
+        y: -24,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+
+    gsap.from('.intro__eyebrow, .section_title__intro, .section_subtitle__intro, .intro__actions, .intro__hud', {
+        y: 34,
+        opacity: 0,
+        duration: 0.95,
+        stagger: 0.1,
+        ease: 'power3.out'
+    });
+
+    gsap.to('.intro__img', {
+        yPercent: -10,
+        rotate: 2,
+        scrollTrigger: {
+            trigger: '.intro',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        }
+    });
+
+    gsap.utils.toArray('section, .work-group, .video-card, .footer').forEach((element) => {
+        gsap.fromTo(element, {
+            y: 58,
+            opacity: 0.18
+        }, {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: element,
+                start: 'top 86%',
+                end: 'top 45%',
+                scrub: 0.65
+            }
+        });
+    });
+
+    gsap.utils.toArray('.portfolio img, .video-card__media video').forEach((media) => {
+        gsap.fromTo(media, {
+            scale: 0.88,
+            opacity: 0.72
+        }, {
+            scale: 1,
+            opacity: 1,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: media,
+                start: 'top 90%',
+                end: 'bottom 28%',
+                scrub: true
+            }
+        });
+    });
+
+    gsap.utils.toArray('.work-group').forEach((group) => {
+        const directCards = Array.from(group.children).filter((child) => {
+            return child.tagName === 'DIV' &&
+                !child.classList.contains('work-group__header') &&
+                !child.classList.contains('video-grid');
+        });
+        const cards = directCards.concat(Array.from(group.querySelectorAll('.video-card')));
+
+        cards.forEach((card, index) => {
+            gsap.fromTo(card, {
+                y: 44 + index * 8,
+                opacity: 0.38
+            }, {
+                y: 0,
+                opacity: 1,
+                ease: 'power2.out',
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 88%',
+                    end: 'top 48%',
+                    scrub: 0.5
+                }
+            });
+        });
+    });
+}

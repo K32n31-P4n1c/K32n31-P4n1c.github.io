@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Andrej Burovski portfolio site featuring gameplay programming, Unreal Engine, Unity, and shader work.">
+    <meta property="og:title" content="Andrej Burovski Portfolio">
+    <meta property="og:description" content="Gameplay programming, interactive systems, Unreal Engine, Unity, and shader work by Andrej Burovski.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Header.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Andrej Portfolio Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Orbitron:wght@500;700;800&family=Rajdhani:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header>
         <div class="logo">
             <a href="#home" class="logo__mark" aria-label="Go to home section">
@@ -38,6 +44,7 @@
         </nav>
     </header>
 
+    <main id="main-content">
     <section class="intro" id="home">
         <div class="intro__content">
             <p class="intro__eyebrow">Gameplay Programmer // Unreal, Unity, Shaders</p>
@@ -79,7 +86,7 @@
         </div>
 
         <a href="#work" class="btn"> My Work </a>
-        <a href="./Resume - Andrej Burovski.pdf" class="btn" style="margin-left:10px"> Resume </a>
+        <a href="./Resume - Andrej Burovski.pdf" class="btn btn--service-resume"> Resume </a>
     </section>
 
     <section class="about-me" id="about">
@@ -111,20 +118,14 @@
                 <h2 class="section_title section_title__work">My work</h2>
                 <p class="section_subtitle section_subtitle__work">A selection of gameplay systems, shader studies, prototypes, and game jam projects.</p>
             </div>
-            <div class="work__signals" aria-label="Project focus areas">
-                <span class="work__signal">Gameplay Systems</span>
-                <span class="work__signal">Shaders</span>
-                <span class="work__signal">Tools</span>
-                <span class="work__signal">Game Jams</span>
+            <div class="work__nav" aria-label="Project section navigation">
+                <a class="work__nav-link" href="#work-unreal">Unreal</a>
+                <a class="work__nav-link" href="#work-shaders">UE5 Shaders</a>
+                <a class="work__nav-link" href="#work-unity">Unity</a>
+                <a class="work__nav-link" href="#work-pygame">Pygame</a>
+                <a class="work__nav-link" href="#work-winforms">WinForms</a>
+                <a class="work__nav-link" href="#work-gamejams">Game Jams</a>
             </div>
-        </div>
-        <div class="work__nav" aria-label="Project section navigation">
-            <a class="work__nav-link" href="#work-unreal">Unreal</a>
-            <a class="work__nav-link" href="#work-shaders">UE5 Shaders</a>
-            <a class="work__nav-link" href="#work-unity">Unity</a>
-            <a class="work__nav-link" href="#work-pygame">Pygame</a>
-            <a class="work__nav-link" href="#work-winforms">WinForms</a>
-            <a class="work__nav-link" href="#work-gamejams">Game Jams</a>
         </div>
 
         <div class="portfolio">
@@ -157,14 +158,13 @@
                             object it shrinks and disappears under a certain threshold hits, when we hit the cubes we get
                             feedback by changing its color. You can check the main functionality written in C++ below</p>
                     </div>
-                </div>
-                <div class="line-of-code">
-                    <details class="code-panel">
-                        <summary class="code-panel__summary">
-                            <span class="code-panel__label">Source Panel</span>
-                            <span class="code-panel__hint">AFPSProjectile::OnHit</span>
-                        </summary>
-                        <pre>
+                    <div class="line-of-code">
+                        <details class="code-panel">
+                            <summary class="code-panel__summary">
+                                <span class="code-panel__label">Source Panel</span>
+                                <span class="code-panel__hint">AFPSProjectile::OnHit</span>
+                            </summary>
+                            <pre>
 void AFPSProjectile::OnHit(
     UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit){
     // Only add impulse and destroy projectile if we hit a physics
@@ -185,8 +185,9 @@ void AFPSProjectile::OnHit(
         if(_MatInst){
             // Change the RGB color, stored in a vector
             _MatInst->SetVectorParameterValue("Color", FLinearColor::MakeRandomColor());}}} 
-                        </pre>
-                    </details>
+                            </pre>
+                        </details>
+                    </div>
                 </div>
                 <div class="interacting-systems">
                     <p><img src="Img/Interact.gif" alt="Interaction system demo" loading="lazy"></p>
@@ -403,6 +404,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
             </article>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <a href="mailto:andrej.burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a><br>
@@ -426,7 +428,9 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
         </ul>
     </footer>
 
-    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="js/index.js" defer></script>
 </body>
 
 </html>
