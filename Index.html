@@ -39,7 +39,7 @@
                 <li class="nav__item"><a href="#services" class="nav__link"> My Services </a></li>
                 <li class="nav__item"><a href="#about" class="nav__link"> About Me </a></li>
                 <li class="nav__item"><a href="#work" class="nav__link"> My Work </a></li>
-                <li class="nav__item"><a href="#ue5-shaders" class="nav__link"> UE5 Shaders </a></li>
+                <li class="nav__item nav__item--mobile-hidden"><a href="#ue5-shaders" class="nav__link"> UE5 Shaders </a></li>
             </ul>
         </nav>
     </header>
@@ -137,7 +137,7 @@
                 </div>
 
                 <div class="dolly-zoom">
-                    <p><img src="Img/Dolly_zoom.gif" alt="Dolly zoom effect" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Dolly zoom effect"><source src="Img/Dolly_zoom.mp4" type="video/mp4"></video></p>
                     <div class="dolly-text">
                         <a class="section_subtitle__work">
                             <h3>Dolly zoom / Vertigo effect</h3>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="color-shooter">
-                    <p><img src="Img/ColorShooter.gif" alt="ColorShooter demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="ColorShooter demo"><source src="Img/ColorShooter.mp4" type="video/mp4"></video></p>
                     <div class="color-text">
                         <a class="section_subtitle__work">
                             <h3>ColorShooter</h3>
@@ -190,7 +190,7 @@ void AFPSProjectile::OnHit(
                     </div>
                 </div>
                 <div class="interacting-systems">
-                    <p><img src="Img/Interact.gif" alt="Interaction system demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Interaction system demo"><source src="Img/Interact.mp4" type="video/mp4"></video></p>
                     <div class="interacing-text">
                         <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/Interaction_system">
                             <h3>Interacting systems</h3>
@@ -207,27 +207,45 @@ void AFPSProjectile::OnHit(
                     <h2 class="section_title__work" id="ue5-shaders">UE5 Shaders</h2>
                     <p class="section_subtitle section_subtitle__work section_subtitle__work--compact">Shader studies and rendered material tests in Unreal Engine&nbsp;5.</p>
                 </div>
-                <div class="video-grid">
-                    <article class="video-card">
-                        <div class="video-card__media">
-                            <video controls preload="metadata" playsinline>
-                                <source src="Videos/Shader_HLSL_01.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-                        <div class="video-card__content">
-                            <h3>Shader HLSL 01</h3>
-                        </div>
-                    </article>
+                <div class="shader-carousel" data-shader-carousel>
+                    <div class="shader-carousel__controls" aria-label="UE5 shader study navigation">
+                        <button class="shader-carousel__button shader-carousel__button--prev" type="button" data-shader-prev aria-label="Previous UE5 shader study"><span aria-hidden="true">&lt;</span><span>Prev shader</span></button>
+                        <span class="shader-carousel__status" data-shader-status aria-live="polite">01 / 02</span>
+                        <button class="shader-carousel__button shader-carousel__button--next" type="button" data-shader-next aria-label="Next UE5 shader study"><span>Next shader</span><span aria-hidden="true">&gt;</span></button>
+                    </div>
 
-                    <article class="video-card">
-                        <div class="video-card__content">
-                            <h3>Shader explanation</h3>
-                            <p>This shader builds a procedural sci-fi light pattern designed to make a surface feel active, digital, and slightly unpredictable, like a futuristic panel, reactor surface, or diagnostic display, without relying on texture inputs.</p>
-                            <p>It uses HLSL-driven randomness over a simple grid so each cell gets its own timing, motion, and intensity. That variation keeps the animation from feeling mechanical while still preserving a clean, engineered structure.</p>
-                            <p>A small set of exposed parameters controls density, speed, brightness, sharpness, and how many cells remain inactive, making the effect easy to art-direct. The final result sits between interface design and ambient motion: ordered, readable, and still alive.</p>
-                        </div>
-                    </article>
+                    <div class="video-grid shader-carousel__track">
+                        <article class="video-card shader-slide is-active" data-shader-slide>
+                            <div class="video-card__media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="Videos/Shader_HLSL_01.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-card__content">
+                                <h3>Shader HLSL 01</h3>
+                                <p>This shader builds a procedural sci-fi light pattern designed to make a surface feel active, digital, and slightly unpredictable, like a futuristic panel, reactor surface, or diagnostic display, without relying on texture inputs.</p>
+                                <p>It uses HLSL-driven randomness over a simple grid so each cell gets its own timing, motion, and intensity. That variation keeps the animation from feeling mechanical while still preserving a clean, engineered structure.</p>
+                                <p>A small set of exposed parameters controls density, speed, brightness, sharpness, and how many cells remain inactive, making the effect easy to art-direct. The final result sits between interface design and ambient motion: ordered, readable, and still alive.</p>
+                            </div>
+                        </article>
+
+                        <article class="video-card shader-slide" data-shader-slide>
+                            <div class="video-card__media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="Videos/Shader_HLSL_02.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-card__content">
+                                <h3>Shader HLSL 02</h3>
+                                <p>This shader creates a procedural violet wave-and-ripple floor for a magical or cyber sci-fi surface. It uses HLSL to generate subtle flowing waves and random rain-like ripples without texture inputs.</p>
+                                <p>The wave layer gives the floor constant soft motion, while the ripple layer creates expanding rings that appear, spread, echo, and fade like drops hitting water. Each ripple has randomized size, thickness, brightness, speed, and position, with occasional larger ripples for more natural variation.</p>
+                                <p>The material uses world-space floor projection, so the effect stays stable on large floors and platforms. Separate parameters control wave color, ripple color, wave movement, ripple density, ripple size range, ripple speed, and emissive pulse strength.</p>
+                                <p>The final result is a dark violet animated surface with subtle background motion, glowing varied ripples, rare larger impacts, and a soft breathing glow. It feels like a mix between magical water, cyber energy, and an abstract sci-fi floor.</p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </article>
 
@@ -241,11 +259,11 @@ void AFPSProjectile::OnHit(
                     <h3>Shaders</h3>
                 </a>
                 <div class="shaders">
-                    <p><img src="Img/Shade1.gif" alt="Unity shader gif 1" loading="lazy"></p>
-                    <p><img src="Img/Shade2.gif" alt="Unity shader gif 2" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Unity shader demo 1"><source src="Img/Shade1.mp4" type="video/mp4"></video></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Unity shader demo 2"><source src="Img/Shade2.mp4" type="video/mp4"></video></p>
                 </div>
                 <div class="cubic-lerp">
-                    <p><img src="Img/CubicLerp.gif" alt="Cubic lerp demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Cubic lerp demo"><source src="Img/CubicLerp.mp4" type="video/mp4"></video></p>
                     <div class="cubic-lerp-text">
                             <a class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></a>
                             <details class="code-panel code-panel--inline">
@@ -268,7 +286,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     </div>
                 </div>
                 <div class="rpg">
-                    <p><img src="Img/2DRPG.gif" alt="2D RPG demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="2D RPG demo"><source src="Img/2DRPG.mp4" type="video/mp4"></video></p>
                     <div class="rpg-text">
                         <a class="section_subtitle__work">
                             <h3>2D RPG adventure</h3>
@@ -278,7 +296,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     </div>
                 </div>
                 <div class="ballz">
-                    <p><img src="Img/Ballz.gif" alt="Ballz demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Ballz demo"><source src="Img/Ballz.mp4" type="video/mp4"></video></p>
                     <div class="ballz-text">
                         <a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/UBallz">
                             <h3>Ballz</h3>
@@ -296,7 +314,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     <p class="work-group__summary">Smaller Python projects built around gameplay rules, visualization, and rapid experimentation.</p>
                 </div>
                 <div class="snake">
-                    <p><img src="Img/Snake.gif" alt="Snake demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Snake demo"><source src="Img/Snake.mp4" type="video/mp4"></video></p>
                     <div class="snake-text">
                         <a class="section_subtitle__work">
                             <h3>Snake</h3>
@@ -305,7 +323,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     </div>
                 </div>
                 <div class="turtle-race">
-                    <p><img src="Img/TurtleRace.gif" alt="Turtle race demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Turtle race demo"><source src="Img/TurtleRace.mp4" type="video/mp4"></video></p>
                     <div class="turtle-race-text">
                         <a class="section_subtitle__work">
                             <h3>Turtle race</h3>
@@ -335,7 +353,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     <p class="work-group__summary">A classic desktop-game implementation focused on UI flow, state management, and board-game logic.</p>
                 </div>
                 <div class="battleship">
-                    <p><img src="Img/BattleShip.gif" alt="Battleships demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Battleships demo"><source src="Img/BattleShip.mp4" type="video/mp4"></video></p>
                     <div class="battleship-text"><a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips">
                         <h3>Battleships</h3>
                     </a>
@@ -353,7 +371,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     <p class="work-group__summary">Short-scope team and solo projects where mechanics, clarity, and delivery mattered more than polish.</p>
                 </div>
                 <div class="bob-colorland">
-                    <p><img src="Img/BobInColorland.gif" alt="Bob in Colorland demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Bob in Colorland demo"><source src="Img/BobInColorland.mp4" type="video/mp4"></video></p>
                     <div class="colorland-text"><a class="section_subtitle__work" href="https://run71m3-3rr0r.itch.io/bob-in-colorland">
                             <h3>Bob in Colorland</h3>
                         </a>
@@ -364,7 +382,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                     </div>
                 </div>
                 <div class="defector">
-                    <p><img src="Img/Defector.gif" alt="Defector demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Defector demo"><source src="Img/Defector.mp4" type="video/mp4"></video></p>
                     <div class="defector-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2022/games/defector-7">
                         <h3>Defector</h3>
                     </a>
@@ -374,7 +392,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                         moving scaling and rotating platforms, and implement the system for health.</p></div>
                 </div>
                 <div class="kompir">
-                    <p><img src="Img/TheLastKompir.gif" alt="The Last Kompir demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="The Last Kompir demo"><source src="Img/TheLastKompir.mp4" type="video/mp4"></video></p>
                         <div class="kompir-text">
                             <a class="section_subtitle__work" href="https://globalgamejam.org/2017/games/last-kompir">
                                 <h3>The Last Kompir</h3>
@@ -386,7 +404,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                         </div>
                 </div>
                 <div class="shadow-rune">
-                    <p><img src="Img/Shadow's Rune.gif" alt="Shadow's Rune demo" loading="lazy"></p>
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Shadow's Rune demo"><source src="Img/Shadow's Rune.mp4" type="video/mp4"></video></p>
                         <div class="shadow-rune-text"><a class="section_subtitle__work" href="https://globalgamejam.org/2016/games/shadows-rune">
                                 <h3>Shadow's Rune</h3>
                             </a>
@@ -428,8 +446,6 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
         </ul>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="js/index.js" defer></script>
 </body>
 

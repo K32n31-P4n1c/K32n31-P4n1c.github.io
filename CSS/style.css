@@ -3006,3 +3006,265 @@ body::after {
         animation: none !important;
     }
 }
+
+/* Scroll performance pass */
+body {
+    background-attachment: scroll;
+    animation: none;
+}
+
+body::before,
+body::after {
+    animation: none;
+}
+
+video {
+    content-visibility: auto;
+}
+
+.work-group,
+.video-card {
+    content-visibility: auto;
+}
+
+.work-group {
+    contain-intrinsic-size: 900px;
+}
+
+.video-card {
+    contain: layout paint;
+    contain-intrinsic-size: 420px;
+}
+
+.work-group > div:not(.video-grid) {
+    contain: layout paint;
+}
+
+.work-group > div:not(.video-grid) > p:first-child img,
+.shaders p img,
+.video-card__media video {
+    transition: transform 300ms ease;
+}
+
+.work-group > div:not(.video-grid):hover > p:first-child img,
+.shaders:hover p img,
+.video-card:hover video {
+    filter: saturate(1.15) contrast(1.08);
+}
+
+.work-group > div:not(.video-grid) > p:first-child video,
+.shaders p video {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+    border: 0;
+    border-radius: 0;
+    filter: saturate(1.15) contrast(1.08);
+    box-shadow:
+        0 0 0 1px rgba(0, 246, 255, 0.24),
+        0 0 28px rgba(0, 246, 255, 0.16),
+        0 0 46px rgba(255, 36, 214, 0.11);
+    transition: transform 300ms ease;
+}
+
+.work-group > div:not(.video-grid):hover > p:first-child video,
+.shaders:hover p video {
+    transform: scale(1.06);
+}
+
+@media (max-width: 900px) {
+    .work-group > div:not(.video-grid) > p:first-child video,
+    .shaders p video {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav__item--mobile-hidden {
+        display: none;
+    }
+}
+
+.work-group > .shader-carousel {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    align-items: stretch;
+    gap: 1rem;
+    min-height: 0;
+    padding: clamp(0.9rem, 2vw, 1.2rem);
+    overflow: visible;
+}
+
+.work-group > .shader-carousel:hover {
+    transform: none;
+}
+
+.shader-carousel__controls {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.35rem;
+    border: 1px solid rgba(255, 244, 92, 0.22);
+    border-radius: 8px;
+    background:
+        linear-gradient(90deg, rgba(255, 244, 92, 0.08), rgba(0, 246, 255, 0.08)),
+        rgba(2, 5, 18, 0.86);
+    box-shadow:
+        0 0 0 1px rgba(0, 246, 255, 0.12),
+        0 0 28px rgba(255, 244, 92, 0.08);
+}
+
+.shader-carousel__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-width: 10.25rem;
+    min-height: 3.25rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(255, 244, 92, 0.5);
+    border-radius: 8px;
+    background:
+        linear-gradient(135deg, rgba(255, 244, 92, 0.22), rgba(0, 246, 255, 0.15) 48%, rgba(255, 36, 214, 0.12)),
+        rgba(2, 5, 18, 0.96);
+    color: #ffffff;
+    font-family: var(--ff-display);
+    font-size: 0.82rem;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow:
+        inset 0 0 18px rgba(255, 244, 92, 0.08),
+        0 0 18px rgba(255, 244, 92, 0.14),
+        0 0 26px rgba(0, 246, 255, 0.1);
+    transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.shader-carousel__button span[aria-hidden="true"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.55rem;
+    height: 1.55rem;
+    border-radius: 6px;
+    background: rgba(255, 244, 92, 0.16);
+    color: var(--clr-warn);
+    font-size: 1.05rem;
+}
+
+.shader-carousel__button:hover,
+.shader-carousel__button:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(255, 244, 92, 0.86);
+    background:
+        linear-gradient(135deg, rgba(255, 244, 92, 0.32), rgba(0, 246, 255, 0.2) 48%, rgba(255, 36, 214, 0.18)),
+        rgba(2, 5, 18, 1);
+    box-shadow:
+        0 0 24px rgba(255, 244, 92, 0.2),
+        0 0 22px rgba(0, 246, 255, 0.18),
+        0 0 28px rgba(255, 36, 214, 0.16);
+}
+
+.shader-carousel__button:focus-visible {
+    outline: 2px solid var(--clr-warn);
+    outline-offset: 3px;
+}
+
+.shader-carousel__button:active {
+    transform: translateY(1px) scale(0.99);
+}
+
+.shader-carousel__status {
+    min-width: 5.25rem;
+    color: var(--clr-lime);
+    font-family: var(--ff-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-shadow: 0 0 12px rgba(124, 255, 91, 0.34);
+}
+
+.video-grid.shader-carousel__track {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 100%;
+    margin: 0;
+}
+
+.shader-carousel.is-enhanced .shader-slide:not(.is-active) {
+    display: none;
+}
+
+.shader-slide {
+    display: grid;
+    grid-template-columns: minmax(0, 0.58fr) minmax(280px, 0.42fr);
+    align-items: stretch;
+}
+
+.shader-slide .video-card__media {
+    min-height: 100%;
+}
+
+.shader-slide .video-card__media video {
+    height: 100%;
+    min-height: 320px;
+    object-fit: cover;
+}
+
+.shader-slide:hover .video-card__media video,
+.video-card.shader-slide:hover video {
+    transform: none;
+    filter: saturate(1.15) contrast(1.08);
+}
+
+.shader-slide .video-card__content {
+    align-self: center;
+}
+
+.shader-slide .video-card__content p + p {
+    margin-top: 0.85rem;
+}
+
+@media (max-width: 860px) {
+    .shader-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .shader-slide .video-card__media video {
+        height: auto;
+        min-height: 0;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 560px) {
+    .shader-carousel__controls {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 0.5rem;
+        padding: 0.3rem;
+    }
+
+    .shader-carousel__button {
+        min-width: 0;
+        min-height: 3rem;
+        padding: 0.6rem 0.55rem;
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+    }
+
+    .shader-carousel__button span[aria-hidden="true"] {
+        width: 1.35rem;
+        height: 1.35rem;
+    }
+
+    .shader-carousel__status {
+        min-width: 4rem;
+        font-size: 0.68rem;
+    }
+}

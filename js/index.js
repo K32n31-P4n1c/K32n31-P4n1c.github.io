@@ -86,96 +86,80 @@ if ('IntersectionObserver' in window && workSections.length > 0 && workNavLinks.
     setActiveWorkLink(workSections[0].id);
 }
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const shaderCarousels = document.querySelectorAll('[data-shader-carousel]');
 
-if (!prefersReducedMotion && window.gsap && window.ScrollTrigger) {
-    gsap.registerPlugin(ScrollTrigger);
-    document.body.classList.add('gsap-ready');
+shaderCarousels.forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('[data-shader-slide]'));
+    const prevButton = carousel.querySelector('[data-shader-prev]');
+    const nextButton = carousel.querySelector('[data-shader-next]');
+    const status = carousel.querySelector('[data-shader-status]');
 
-    gsap.from('.logo, .nav-toggle', {
-        y: -24,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out'
-    });
+    if (slides.length < 2 || !prevButton || !nextButton || !status) {
+        return;
+    }
 
-    gsap.from('.intro__eyebrow, .section_title__intro, .section_subtitle__intro, .intro__actions, .intro__hud', {
-        y: 34,
-        opacity: 0,
-        duration: 0.95,
-        stagger: 0.1,
-        ease: 'power3.out'
-    });
+    let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
 
-    gsap.to('.intro__img', {
-        yPercent: -10,
-        rotate: 2,
-        scrollTrigger: {
-            trigger: '.intro',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true
-        }
-    });
+    if (activeIndex < 0) {
+        activeIndex = 0;
+    }
 
-    gsap.utils.toArray('section, .work-group, .video-card, .footer').forEach((element) => {
-        gsap.fromTo(element, {
-            y: 58,
-            opacity: 0.18
-        }, {
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            ease: 'power3.out',
-            scrollTrigger: {
-                trigger: element,
-                start: 'top 86%',
-                end: 'top 45%',
-                scrub: 0.65
-            }
-        });
-    });
+    const formatCount = (value) => String(value).padStart(2, '0');
 
-    gsap.utils.toArray('.portfolio img, .video-card__media video').forEach((media) => {
-        gsap.fromTo(media, {
-            scale: 0.88,
-            opacity: 0.72
-        }, {
-            scale: 1,
-            opacity: 1,
-            ease: 'none',
-            scrollTrigger: {
-                trigger: media,
-                start: 'top 90%',
-                end: 'bottom 28%',
-                scrub: true
-            }
-        });
-    });
+    const syncSlides = () => {
+        slides.forEach((slide, index) => {
+            const isActive = index === activeIndex;
+            slide.classList.toggle('is-active', isActive);
+            slide.setAttribute('aria-hidden', String(!isActive));
 
-    gsap.utils.toArray('.work-group').forEach((group) => {
-        const directCards = Array.from(group.children).filter((child) => {
-            return child.tagName === 'DIV' &&
-                !child.classList.contains('work-group__header') &&
-                !child.classList.contains('video-grid');
-        });
-        const cards = directCards.concat(Array.from(group.querySelectorAll('.video-card')));
-
-        cards.forEach((card, index) => {
-            gsap.fromTo(card, {
-                y: 44 + index * 8,
-                opacity: 0.38
-            }, {
-                y: 0,
-                opacity: 1,
-                ease: 'power2.out',
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 88%',
-                    end: 'top 48%',
-                    scrub: 0.5
+            if (!isActive) {
+                const video = slide.querySelector('video');
+                if (video) {
+                    video.pause();
                 }
-            });
+            }
         });
+
+        status.textContent = `${formatCount(activeIndex + 1)} / ${formatCount(slides.length)}`;
+    };
+
+    const moveToSlide = (direction) => {
+        activeIndex = (activeIndex + direction + slides.length) % slides.length;
+        syncSlides();
+    };
+
+    carousel.classList.add('is-enhanced');
+    syncSlides();
+
+    prevButton.addEventListener('click', () => moveToSlide(-1));
+    nextButton.addEventListener('click', () => moveToSlide(1));
+});
+
+const visiblePlayVideos = document.querySelectorAll('video[data-play-on-visible]');
+
+if ('IntersectionObserver' in window && visiblePlayVideos.length > 0) {
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                video.play().catch(() => {});
+                return;
+            }
+
+            video.pause();
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '200px 0px'
+    });
+
+    visiblePlayVideos.forEach((video) => {
+        video.pause();
+        videoObserver.observe(video);
+    });
+} else {
+    visiblePlayVideos.forEach((video) => {
+        video.play().catch(() => {});
     });
 }
