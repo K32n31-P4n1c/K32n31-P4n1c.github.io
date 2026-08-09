@@ -10,7 +10,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="Header.png">
     <meta name="twitter:card" content="summary_large_image">
-    <title>Andrej Portfolio Website</title>
+    <title>Andrej Burovski &mdash; Gameplay Programmer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -66,7 +66,7 @@
     </section>
 
     <section class="my_services" id="services">
-        <h2 class="section_title section_title__services"> What i do</h2>
+        <h2 class="section_title section_title__services"> What I do</h2>
         <div class="services">
             <div class="service">
                 <h3>Design + Development</h3>
@@ -75,37 +75,27 @@
             </div>
 
             <div class="service">
-                <h3>LANGUAGES</h3>
+                <h3>Languages</h3>
                 <p>C++, C#, Python, MySql HTML/CSS</p>
             </div>
 
             <div class="service">
-                <h3>Engines/FRAMEWORKS</h3>
+                <h3>Engines &amp; frameworks</h3>
                 <p>Unreal Engine 4, Unity, GameMaker, Pygame, WinForms, Git & Github, Perforce, HacknPlan</p>
             </div>
         </div>
 
-        <a href="#work" class="btn"> My Work </a>
-        <a href="./Resume - Andrej Burovski.pdf" class="btn btn--service-resume"> Resume </a>
+        <a href="#about" class="btn"> About Me </a>
+        <a href="#contact" class="btn btn--service-resume"> Contact Me </a>
     </section>
 
     <section class="about-me" id="about">
         <h2 class="section_title section_title__about"> Who I am</h2>
         <p class="section_subtitle section_subtitle__about">Gameplay programmer / technical generalist</p>
         <div class="about-me__body">
-            <p><strong>
-                    My passion truly lies in game development.
-                    I am an independent game developer who enjoys learning, taking on challenges and designing video
-                    game systems.
-                    I take a lot of joy in being able to continually work on a variety of different projects as it
-                    consistently allows me to keep growing and learning.
-                    I love being able to design and develop interactive experiences that can be enjoyed globally by a
-                    wide-range of different audiences.
-                    If I'm not working hard with clients, I'm probably working on a personal project, participating in a
-                    game jam, powerlifting or exploring the gorgeous highlands of my local area.
-                    I'm always on the lookout for new clients with interesting projects to work on, so if you think
-                    that's you, send me an email!
-                </strong></p>
+            <p>My passion lies in game development. I am an independent developer who enjoys learning, taking on difficult problems, and designing gameplay systems.</p>
+            <p>Working across different projects keeps me growing, and I especially enjoy building interactive experiences that can connect with a wide range of players.</p>
+            <p>Outside client work, I am usually developing a personal project, joining a game jam, powerlifting, or exploring the highlands near home. I am always interested in thoughtful new projects, so <a href="mailto:andrej.burovski@protonmail.com">send me an email</a> if you would like to work together.</p>
         </div>
 
         <img src="About_me.jpg" alt="Portrait of Andrej Burovski" class="about-me__img">
@@ -122,9 +112,9 @@
                 <a class="work__nav-link" href="#work-unreal">Unreal</a>
                 <a class="work__nav-link" href="#work-shaders">UE5 Shaders</a>
                 <a class="work__nav-link" href="#work-unity">Unity</a>
+                <a class="work__nav-link" href="#work-gamejams">Game Jams</a>
                 <a class="work__nav-link" href="#work-pygame">Pygame</a>
                 <a class="work__nav-link" href="#work-winforms">WinForms</a>
-                <a class="work__nav-link" href="#work-gamejams">Game Jams</a>
             </div>
         </div>
 
@@ -136,12 +126,41 @@
                     <p class="work-group__summary">Gameplay prototypes, interaction systems, and camera/game-feel experiments built in C++ and Blueprint-driven workflows.</p>
                 </div>
 
+                <div class="crt-display">
+                    <div class="crt-display__media crt-media-carousel" data-crt-media-carousel>
+                        <div class="crt-media-carousel__stage">
+                            <div class="crt-media-slide is-active" data-crt-media-slide>
+                                <video controls playsinline preload="metadata" aria-label="CRT display and font-corruption system demo">
+                                    <source src="Videos/CRT%20%20Corruption.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <a class="crt-media-slide" data-crt-media-slide href="Img/CRT_01.png" target="_blank" rel="noopener noreferrer">
+                                <img src="Img/CRT_01.png" alt="CRT display system screenshot 1" loading="lazy">
+                            </a>
+                            <a class="crt-media-slide" data-crt-media-slide href="Img/CRT_02.png" target="_blank" rel="noopener noreferrer">
+                                <img src="Img/CRT_02.png" alt="CRT display system screenshot 2" loading="lazy">
+                            </a>
+                            <a class="crt-media-slide" data-crt-media-slide href="Img/CRT_03.png" target="_blank" rel="noopener noreferrer">
+                                <img src="Img/CRT_03.png" alt="CRT display system screenshot 3" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="crt-media-carousel__controls" aria-label="CRT media navigation">
+                            <button type="button" data-crt-media-prev aria-label="Previous CRT media"><span aria-hidden="true">&lt;</span><span>Previous</span></button>
+                            <span data-crt-media-status aria-live="polite">01 / 04</span>
+                            <button type="button" data-crt-media-next aria-label="Next CRT media"><span>Next</span><span aria-hidden="true">&gt;</span></button>
+                        </div>
+                    </div>
+                    <div class="crt-display__content">
+                        <h3>CRT Display and Font-Corruption System</h3>
+                        <p>The CRT system is a modular Unreal Engine UI-effects framework that recreates the visual behavior of analog displays. It combines CRT material processing - such as scanlines, glow, flicker, distortion, chromatic separation, and signal instability - with a font-corruption layer capable of altering displayed characters dynamically. The system is implemented in C++ for reusable runtime control while exposing its primary parameters and functions to Blueprint, allowing artists to build effects without modifying shader or gameplay code.</p>
+                        <p>A central CRT controller provides a consistent runtime API for changing effect intensity, corruption state, and material parameters. These properties can be driven from Blueprint events, animations, sequencers, or gameplay systems, enabling effects to react to damage, power loss, interference, proximity, narrative events, or player interaction.</p>
+                    </div>
+                </div>
+
                 <div class="dolly-zoom">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Dolly zoom effect"><source src="Img/Dolly_zoom.mp4" type="video/mp4"></video></p>
                     <div class="dolly-text">
-                        <a class="section_subtitle__work">
-                            <h3>Dolly zoom / Vertigo effect</h3>
-                        </a>
+                        <div class="section_subtitle__work"><h3>Dolly zoom / Vertigo effect</h3></div>
                         <p>A dolly zoom is an in-camera effect that appears to undermine normal visual perception. The
                             effect is achieved by zooming a zoom lens to adjust the angle of view while the camera dollies
                             toward or away from the subject in such a way as to keep the subject the same size in the frame
@@ -151,9 +170,7 @@
                 <div class="color-shooter">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="ColorShooter demo"><source src="Img/ColorShooter.mp4" type="video/mp4"></video></p>
                     <div class="color-text">
-                        <a class="section_subtitle__work">
-                            <h3>ColorShooter</h3>
-                        </a>
+                        <div class="section_subtitle__work"><h3>ColorShooter</h3></div>
                         <p>This is a small First-person C++ project. The goal of this game is that every time we shoot an
                             object it shrinks and disappears under a certain threshold hits, when we hit the cubes we get
                             feedback by changing its color. You can check the main functionality written in C++ below</p>
@@ -170,11 +187,11 @@ void AFPSProjectile::OnHit(
     // Only add impulse and destroy projectile if we hit a physics
     if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != NULL) && OtherComp->IsSimulatingPhysics()){
         OtherComp->AddImpulseAtLocation(GetVelocity() * 100.0f, GetActorLocation());
-        
+
         FVector _Scale = OtherComp->GetComponentScale();
         // Make it smaller
         _Scale = _Scale * 0.8f;
-        
+
         if (_Scale.GetMin() < 0.5f){
             // We cant to destry the whole Actor not just the component
             OtherActor->Destroy();}
@@ -184,7 +201,7 @@ void AFPSProjectile::OnHit(
         UMaterialInstanceDynamic* _MatInst = OtherComp->CreateAndSetMaterialInstanceDynamic(0);
         if(_MatInst){
             // Change the RGB color, stored in a vector
-            _MatInst->SetVectorParameterValue("Color", FLinearColor::MakeRandomColor());}}} 
+            _MatInst->SetVectorParameterValue("Color", FLinearColor::MakeRandomColor());}}}
                             </pre>
                         </details>
                     </div>
@@ -255,23 +272,25 @@ void AFPSProjectile::OnHit(
                     <h2 class="section_title__work">Unity</h2>
                     <p class="work-group__summary">A mix of math-driven experiments, shaders, and smaller prototype games focused on feel, iteration speed, and readable systems.</p>
                 </div>
-                <a class="section_subtitle__work shaders" href="https://github.com/K32n31-P4n1c/UShaders">
+                <div class="unity-shaders">
+                    <a class="section_subtitle__work shaders" href="https://github.com/K32n31-P4n1c/UShaders">
                     <h3>Shaders</h3>
                 </a>
                 <div class="shaders">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Unity shader demo 1"><source src="Img/Shade1.mp4" type="video/mp4"></video></p>
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Unity shader demo 2"><source src="Img/Shade2.mp4" type="video/mp4"></video></p>
                 </div>
+                </div>
                 <div class="cubic-lerp">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Cubic lerp demo"><source src="Img/CubicLerp.mp4" type="video/mp4"></video></p>
                     <div class="cubic-lerp-text">
-                            <a class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></a>
+                            <div class="section_subtitle__work"><h3>CubicLerp between 4 points</h3></div>
                             <details class="code-panel code-panel--inline">
                                 <summary class="code-panel__summary">
                                     <span class="code-panel__label">Math Source</span>
                                     <span class="code-panel__hint">QuadraticLerp / CubicLerp</span>
                                 </summary>
-                                <pre>    
+                                <pre>
 private Vector3 QuadraticLerp(Vector3 a, Vector3 b, Vector3 c, float t){
 Vector3 ab = Vector3.Lerp(a, b, t);
 Vector3 bc = Vector3.Lerp(b, c, t);
@@ -288,9 +307,7 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 <div class="rpg">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="2D RPG demo"><source src="Img/2DRPG.mp4" type="video/mp4"></video></p>
                     <div class="rpg-text">
-                        <a class="section_subtitle__work">
-                            <h3>2D RPG adventure</h3>
-                        </a>
+                        <div class="section_subtitle__work"><h3>2D RPG adventure</h3></div>
                         <p> Currently building a 2D RPG-style game, still havent defined most of the functionalities of this
                             game. </p>
                     </div>
@@ -307,69 +324,13 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                 </div>
             </article>
 
-            <article class="work-group" id="work-pygame">
-                <div class="work-group__header">
-                    <p class="work-group__eyebrow">Framework Focus</p>
-                    <h2 class="section_title__work">Pygame</h2>
-                    <p class="work-group__summary">Smaller Python projects built around gameplay rules, visualization, and rapid experimentation.</p>
-                </div>
-                <div class="snake">
-                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Snake demo"><source src="Img/Snake.mp4" type="video/mp4"></video></p>
-                    <div class="snake-text">
-                        <a class="section_subtitle__work">
-                            <h3>Snake</h3>
-                        </a>
-                        <p> Basic version off snake made in python and pygame.</p>
-                    </div>
-                </div>
-                <div class="turtle-race">
-                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Turtle race demo"><source src="Img/TurtleRace.mp4" type="video/mp4"></video></p>
-                    <div class="turtle-race-text">
-                        <a class="section_subtitle__work">
-                            <h3>Turtle race</h3>
-                        </a>
-                        <p>This is a small project where The user picks how many turtles they want to race, and the program will
-                            race that many turtles by randomly moving them across the screen.</p>
-                    </div>
-                </div>
-                <div class="pathfinding">
-                    <p><img src="Img/PathFindingAlgo.png" alt="Pathfinding visualizer" loading="lazy"></p>
-                    <div class="pathfinding-text"><a class="section_subtitle__work">
-                            <h3>Pathfinding Visualization</h3>
-                        </a>
-                        <p> Simple path finding visualizer tool to visualize the a star pathfinding algorithm as it runs. This
-                            astar pathfinding algorithm is an informed search algorithm which means it is much more efficient
-                            that your standard algorithms like breadth first search or depth first search.
-                            You have to specify the start and end point, then draw all the obstacles on the map.
-                        </p>
-                    </div>
-                </div>
-            </article>
-
-            <article class="work-group" id="work-winforms">
-                <div class="work-group__header">
-                    <p class="work-group__eyebrow">Desktop Tools</p>
-                    <h2 class="section_title__work">WinForms</h2>
-                    <p class="work-group__summary">A classic desktop-game implementation focused on UI flow, state management, and board-game logic.</p>
-                </div>
-                <div class="battleship">
-                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Battleships demo"><source src="Img/BattleShip.mp4" type="video/mp4"></video></p>
-                    <div class="battleship-text"><a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips">
-                        <h3>Battleships</h3>
-                    </a>
-                    <p>Battleship is a war-themed board game for two players in which the opponents try to guess the
-                        location of the other's various ships.The goal of the game is to sink all of the opponent's ships by
-                        correctly guessing their location on the grid.</p>
-                    </div>
-                </div>
-            </article>
-
             <article class="work-group" id="work-gamejams">
                 <div class="work-group__header">
                     <p class="work-group__eyebrow">Released Under Pressure</p>
                     <h2 class="section_title__work">Game Jam Games</h2>
                     <p class="work-group__summary">Short-scope team and solo projects where mechanics, clarity, and delivery mattered more than polish.</p>
                 </div>
+                <div class="work-group__projects">
                 <div class="bob-colorland">
                     <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Bob in Colorland demo"><source src="Img/BobInColorland.mp4" type="video/mp4"></video></p>
                     <div class="colorland-text"><a class="section_subtitle__work" href="https://run71m3-3rr0r.itch.io/bob-in-colorland">
@@ -419,12 +380,69 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
                                 moments they used to had before.</p>
                         </div>
                 </div>
+                            </div>
             </article>
+
+            <article class="work-group" id="work-pygame">
+                <div class="work-group__header">
+                    <p class="work-group__eyebrow">Framework Focus</p>
+                    <h2 class="section_title__work">Pygame</h2>
+                    <p class="work-group__summary">Smaller Python projects built around gameplay rules, visualization, and rapid experimentation.</p>
+                </div>
+                <div class="snake">
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Snake demo"><source src="Img/Snake.mp4" type="video/mp4"></video></p>
+                    <div class="snake-text">
+                        <div class="section_subtitle__work"><h3>Snake</h3></div>
+                        <p> Basic version off snake made in python and pygame.</p>
+                    </div>
+                </div>
+                <div class="turtle-race">
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Turtle race demo"><source src="Img/TurtleRace.mp4" type="video/mp4"></video></p>
+                    <div class="turtle-race-text">
+                        <div class="section_subtitle__work"><h3>Turtle race</h3></div>
+                        <p>This is a small project where The user picks how many turtles they want to race, and the program will
+                            race that many turtles by randomly moving them across the screen.</p>
+                    </div>
+                </div>
+                <div class="pathfinding">
+                    <p><img src="Img/PathFindingAlgo.png" alt="Pathfinding visualizer" loading="lazy"></p>
+                    <div class="pathfinding-text"><div class="section_subtitle__work"><h3>Pathfinding Visualization</h3></div>
+                        <p> Simple path finding visualizer tool to visualize the a star pathfinding algorithm as it runs. This
+                            astar pathfinding algorithm is an informed search algorithm which means it is much more efficient
+                            that your standard algorithms like breadth first search or depth first search.
+                            You have to specify the start and end point, then draw all the obstacles on the map.
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-group" id="work-winforms">
+                <div class="work-group__header">
+                    <p class="work-group__eyebrow">Desktop Tools</p>
+                    <h2 class="section_title__work">WinForms</h2>
+                    <p class="work-group__summary">A classic desktop-game implementation focused on UI flow, state management, and board-game logic.</p>
+                </div>
+                <div class="battleship">
+                    <p><video muted loop playsinline preload="metadata" data-play-on-visible aria-label="Battleships demo"><source src="Img/BattleShip.mp4" type="video/mp4"></video></p>
+                    <div class="battleship-text"><a class="section_subtitle__work" href="https://github.com/K32n31-P4n1c/BattleShips">
+                        <h3>Battleships</h3>
+                    </a>
+                    <p>Battleship is a war-themed board game for two players in which the opponents try to guess the
+                        location of the other's various ships.The goal of the game is to sink all of the opponent's ships by
+                        correctly guessing their location on the grid.</p>
+                    </div>
+                </div>
+            </article>
+
+
         </div>
     </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact" aria-labelledby="contact-title">
+        <p class="footer__eyebrow">Available for selected projects</p>
+        <h2 class="footer__title" id="contact-title">Let&#8217;s work together</h2>
+        <p class="footer__copy">Have a gameplay system, Unreal project, or technical prototype that needs a programmer? Send me the details.</p>
         <a href="mailto:andrej.burovski@protonmail.com" class="footer__link">Andrej.Burovski@protonmail.com</a><br>
         <a href="./Resume - Andrej Burovski.pdf" class="footer__link"> Resume <i class="fa-solid fa-file-pdf"></i></a>
         <ul class="social-list">
@@ -450,4 +468,3 @@ return Vector3.Lerp(ab_bc, bc_cd, interpolateAmount);}
 </body>
 
 </html>
-
