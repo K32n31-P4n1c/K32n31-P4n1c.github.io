@@ -3610,3 +3610,19 @@ video {
         0 0 34px rgba(124, 255, 91, 0.16),
         inset 0 0 28px rgba(0, 246, 255, 0.06);
 }
+
+/* Portrait shader demos */
+.shader-slide--portrait .video-card__media {
+    background: #02030a;
+}
+
+.shader-slide--portrait .video-card__media video {
+    height: clamp(480px, 72vh, 720px);
+    object-fit: contain;
+}
+
+@media (max-width: 860px) {
+    .shader-slide--portrait .video-card__media video {
+        height: min(80vh, 720px);
+    }
+}
